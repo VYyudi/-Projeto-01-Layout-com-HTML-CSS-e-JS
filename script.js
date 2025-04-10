@@ -16,22 +16,24 @@ if (searchInput && searchButton && searchResult) {
   });
 }
 
-// =====================
-// Carrossel (Swiper)
-// =====================
-if (typeof Swiper !== 'undefined') {
-  const swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  });
-} else {
-  console.warn('Swiper não está carregado.');
-}
 
 // =====================
 // Dropdown (Menu de Categorias)
 // =====================
+
+function showCategory(index) {
+  const categoryLists = document.querySelectorAll('.category-list');
+
+  categoryLists.forEach((el, i) => {
+    if (i === index) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  });
+}
+
+
 const categorias = document.querySelectorAll('.nav-categorias');
 const dropdown = document.getElementById('dropdownMenu');
 let timeout;

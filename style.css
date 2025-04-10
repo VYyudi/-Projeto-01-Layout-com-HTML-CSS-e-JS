@@ -12,10 +12,14 @@
   
   header {
     width: 100%;
-    margin: 0 auto;
+    height: 148px;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
+    position: fixed;
+    z-index: 999;
   }
   
   .top-banner {
@@ -25,11 +29,12 @@
     padding: 5px;
     font-size: 14px;
     height: 30px;
-    font-family: Nunito Sans, sans-serif;
+
   }
 
 .top-banner span{
     font-style: italic;
+    font-family: 'Nunito', sans-serif;
 }
   
   .main-header {
@@ -49,24 +54,39 @@
     flex-grow: 1;
     margin: 0 40px;
     display:flex;
+    width: 594px;
     height: 40px;
+    top: 46px;
+    left: 548px;
+    padding-left: 50px;
+    padding-right: 220px; /*so chutei o tamanho para que fique com o espacamento igual do figma
+                            ja que no figma nao tem o tamanho exato */
+    
   }
   
   .search-bar input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+    outline: none;
+    border-right: none;
   }
   
   .search-bar button {
-    background-color: #f0f0f0;
+    background-color: #FFFFFF;
+    padding: 8px 12px;
     border: 1px solid #ccc;
     border-left: none;
-    padding: 10px 15px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
   }
+
 
   .search-bar img{
     width: 16px;
@@ -238,9 +258,10 @@
   
   /* Banner principal */
 .banner-principal {
-    background-color: #E7E7EA   ;
-    padding: 0;
+    background-color: #E7E7EA;
+    padding-top: 148px;
     height: 510px;
+    width: 1920px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,7 +278,8 @@
 .banner-conteudo img {
     width: 100%;
     height: 510px;
-    transform: scale(1.8);
+    transform: scale(1.5);
+    padding-bottom: 125px;
     border-radius: 8px;
     top: 0;
     left: 0;
@@ -266,44 +288,61 @@
 
 .texto-banner {
     z-index: 1; 
-    width: 80%;
-    top: 20%;
-    left: 10%;
+    width: 576.03px;
+    height: 224.98px;
+    padding-top: 131px; /*tentando centralizar usando as confg do figma*/
+    left: 944.97px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 60px;
     color: black;
+    font-family: 'Nunito', sans-serif;
+    gap: 12px;
 }
 
 .texto-banner h1 {
-    font-size: 64px;
-    font-weight: 900;
+    width: 575;
+    height: 136;
+    top: -25.51px;
+    left: 0.52px;
+    font-size: 100px;
+    font-weight: 700;
     margin: 0;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
   
 .texto-banner h1 span {
     font-weight: 300;
+    font-size: 100px;
     margin-left: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 .subtitulo {
-    font-size: 18px;
-    letter-spacing: 3px;
-    color: #0077ff;
-    margin-top: 20px;
+    width: 580px;
+    height: 34px;
+    top: 122.49px;
+    left: -1.98px;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 30%;
+    color: #005CFF;
+    font: optional;
+    
 }
 
 .desconto {
     font-size: 40px;
     font-weight: bold;
     color: #0077ff;
-    margin-top: 10px;
     align-self: center;
+    width: 244px;
+    height: 82px;
 }
   
   /* Produtos */
-
   .main-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -359,11 +398,12 @@
 
 #carouselProdutos .col-3 .price .discount {
     background-color: #dff0d8;
-    color: #3c763d;
+    color: #5EC0BE;
     padding: 0.2em 0.4em;
     border-radius: 5px;
     font-size: 0.8em;
     margin-right: 0.5em;
+    text-decoration: underline;
 }
 
 #carouselProdutos .col-3 .price p {
