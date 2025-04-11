@@ -344,18 +344,33 @@
   
   /* Produtos */
   .main-container {
-    max-width: 1200px;
+    max-width: 1288px;
     margin: 0 auto;
     padding: 0 20px;
+    height: 478px;
+    position: relative;
   }
+
   #carouselProdutos .carousel-item .row {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    gap: 40px;
+    position: relative;
+} 
+
+
+.carousel-slide{
+  width: auto;
+  height: 409px;
+}
+
+.text-decoration-none{
+  color: #222;
 }
 
 #carouselProdutos .col-3 {
-    padding: 10px;
+    padding: 10px 15px;
     box-sizing: border-box;
 }
 
@@ -420,13 +435,11 @@
 }
 
 #carouselProdutos .col-3 .btn {
-    background-color: #007bff;
+    background-color: #005CFF;
     color: white;
-    padding: 0.5em 1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    width: 100%;
     box-sizing: border-box;
 }
 
@@ -436,9 +449,15 @@
   border: 1px solid #eee;
   border-radius: 10px;
   background-color: #fff;
-  padding: 15px;
   transition: transform 0.2s ease;
+  width: 238px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
 }
+
 
 .produto-card:hover {
   transform: translateY(-5px);
@@ -464,51 +483,53 @@
 
 .discount {
   background-color: #e0f7e9;
-  color: #0f9d58;
+  color: #5EC0BE;
   font-size: 0.8rem;
   padding: 2px 6px;
   border-radius: 4px;
   margin-left: 5px;
+  text-decoration: underline;
 }
 
 .installment {
   font-size: 0.85rem;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: auto;
-  top: 40%;
-}
-
+/* BOTAO NEXT PREV */
 .custom-arrow {
-  background-color: white;
-  border: 1px solid #ccc;
-  width: 36px;
-  height: 36px;
+  position: absolute;
+  z-index: 1;
+  background-color: #FFFFFF !important;
+  border: 1px solid #005CFF !important;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #001F52;
-  font-size: 20px;
+  width: 30px !important;
+  height: 30px;
+  cursor: pointer;
 }
 
-.carousel-arrow-icon {
-  font-weight: bold;
+.carousel-control-prev.custom-arrow {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-next.custom-arrow {
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-arrow i{
+  font-size: 15px;
+  color: #005CFF;
 }
 
 .carousel-indicators button {
-  background-color: #ccc;
   border: none;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   margin: 3px;
-}
-
-.carousel-indicators .active {
-  background-color: #001F52;
 }
 
 /* Lorem Ipsum Section */
